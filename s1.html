@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Colorful Box Container</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      height: 500px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    .box {
+      flex-basis: 200px;
+      height: 200px;
+      margin: 10px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    .box:hover {
+      background-color: #f1c40f;
+      color: #fff;
+      animation: moveText 0.5s ease-in-out alternate infinite;
+    }
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      animation: moveText 0.5s ease-in-out alternate infinite;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.5;
+      animation: moveText 0.5s ease-in-out alternate infinite;
+    }
+    .box:nth-child(1) {
+      background-color: #3498db;
+    }
+    .box:nth-child(2) {
+      background-color: #e74c3c;
+    }
+    .box:nth-child(3) {
+      background-color: #2ecc71;
+    }
+    .box:nth-child(4) {
+      background-color: #9b59b6;
+    }
+    .box:nth-child(5) {
+      background-color: #f39c12;
+    }
+    
+    /* Animations */
+    @keyframes moveText {
+      0% {transform: translateY(0);}
+      50% {transform: translateY(-5px);}
+      100% {transform: translateY(0);}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <h2>DMS</h2>
+      <p>Discrete Mathematics</p>
+    </div>
+    <div class="box">
+      <h2>TOC</h2>
+      <p>Theory of Computation</p>
+    </div>
+    <div class="box">
+      <h2>COA</h2>
+      <p>Computer Organization and Architecture</p>
+    </div>
+    <div class="box">
+      <h2>OOPS(JAVA)</h2>
+      <p>Object-Oriented Programming with Java</p>
+    </div>
+    <div class="box">
+      <h2>DBMS</h2>
+      <p>Database Management Systems</p>
+    </div>
+  </div>
+</body>
+</html>

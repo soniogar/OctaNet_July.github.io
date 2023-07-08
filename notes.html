@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PDF Table</title>
+    <style>
+      body {
+        background-color: #f5f5f5;
+        font-family: Arial, sans-serif;
+        font-size: 14px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+      }
+      
+      h1 {
+        text-align: center;
+        margin: 20px 0;
+        color: #444;
+      }
+      
+      table {
+        margin: 20px auto;
+        border-collapse: collapse;
+        width: 100%;
+        max-width: 800px;
+        background-color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+      
+      th, td {
+        padding: 10px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      
+      th {
+        background-color: #2ecc71;
+        color: #fff;
+      }
+      
+      .description {
+        font-style: italic;
+      }
+      
+      .btn {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: normal;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        cursor: pointer;
+        background-image: none;
+        border: 1px solid #2ecc71;
+        border-radius: 4px;
+        color: #fff;
+        background-color: #2ecc71;
+        text-decoration: none;
+      }
+      
+      .btn:hover, .btn:focus {
+        color: #fff;
+        background-color: #27ae60;
+        border-color: #27ae60;
+        text-decoration: none;
+      }
+      
+      .success {
+        text-align: center;
+        margin: 20px 0;
+        color: #2ecc71;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PDF Table</h1>
+    <table id="pdfTable">
+      <thead>
+        <tr>
+          <th>PDF Name</th>
+          <th>Description</th>
+          <th>Download</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Add your pre-uploaded PDFs here -->
+        <tr>
+          <td>PDF 1</td>
+          <td class="description">Description of PDF 1</td>
+          <td><a href="pdf1.pdf" class="btn" target="_blank">Download</a></td>
+        </tr>
+        <tr>
+          <td>PDF 2</td>
+          <td class="description">Description of PDF 2</td>
+          <td><a href="pdf2.pdf" class="btn" target="_blank">Download</a></td>
+        </tr>
+        <tr>
+          <td>PDF 3</td>
+          <td class="description">Description of PDF 3</td>
+          <td><a href="pdf3.pdf" class="btn" target="_blank">Download</a></td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <script>
+      // Function to add a new row to the table
+      function addRow(pdfName, description, downloadLink, target) {
+// Get a reference to the table
+var table = document.getElementById("pdfTable");
+
+// Create a new row
+    var row = table.insertRow(-1);
+    
+    // Create cells for the row
+    var nameCell = row.insertCell(0);
+    var descriptionCell = row.insertCell(1);
+    var downloadCell = row.insertCell(2);
+    
+    // Set the values for the cells
+    nameCell.innerHTML = pdfName;
+    descriptionCell.innerHTML = "<span class='description'>" + description + "</span>";
+    downloadCell.innerHTML = "<a href='" + downloadLink + "' class='btn' target='" + target + "'>Download</a>";
+  }
+  
+  // Call the function to add a new row for each pre-uploaded PDF
+  addRow("PDF 4", "Description of PDF 4", "pdf4.pdf", "_blank");
+  addRow("PDF 5", "Description of PDF 5", "pdf5.pdf", "_blank");
+  addRow("PDF 6", "Description of PDF 6", "pdf6.pdf", "_blank");
+</script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
